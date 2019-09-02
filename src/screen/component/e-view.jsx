@@ -2,18 +2,21 @@ import React, { PureComponent } from 'react';
 import { Row, Col } from 'antd';
 import { Button } from 'antd';
 import star from '../../assets/img/shape.png';
-const colorConfig = {
-  completed: ''
-}
-class Eview extends PureComponent {
-  state = {
-    status: 'completed'
-  }
 
+// color Config
+const colorConfig = {
+  'completed': '#3EBCB3',
+  'Editorial Review': '#f5a853',
+  'Dedalined Missed': '#f25c69',
+  'Revision Requested': '#44b5dd'
+}
+
+class Eview extends PureComponent {
 
   render() {
+    const { status } = this.props;
     return (
-      <Col span={16}>
+      <Col span={18}>
         <Row style={{
           border: 'solid 1px rgba(29, 35, 48, 0.08)',
           backgroundColor: '#ffffff',
@@ -22,7 +25,7 @@ class Eview extends PureComponent {
 
           <Col span={12}>
             <div style={{
-              borderLeft: '4px solid rgb(81, 188, 179)',
+              borderLeft: `4px solid ${colorConfig[status]}`,
               paddingLeft: '36px'
             }}>
               <p style={{
@@ -60,12 +63,12 @@ class Eview extends PureComponent {
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
               <p>₹400</p>
               <Button style={{
-                border: '1px solid #3EBCB3',
-                color: '#3EBCB3',
+                border: `1px solid ${colorConfig[status]}`,
+                color: `${colorConfig[status]}`,
                 borderRadius: '14px',
-                backgroundColor: '#3ebcb3',
+                backgroundColor: `${colorConfig[status]}`,
                 color: 'white'
-              }}>Completed</Button>
+              }}>{status}</Button>
               <div><img src={star} /> 4.5</div>
               <Button style={{
                 border: '1px solid #3EBCB3',

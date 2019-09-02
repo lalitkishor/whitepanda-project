@@ -24,11 +24,11 @@ const menu = (
 
 class ScreenDropDown extends PureComponent {
   render() {
-    const { name } = this.props;
+    const { name, isMarginLeft } = this.props;
     return (
       <>
         <Dropdown overlay={menu} >
-          <Button>
+          <Button style={{ marginLeft: `${isMarginLeft ? '15px' : '0px'}` }}>
             {name}<Icon type="down" />
           </Button>
         </Dropdown>
