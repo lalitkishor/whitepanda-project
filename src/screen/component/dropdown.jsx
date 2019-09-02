@@ -27,7 +27,7 @@ class ScreenDropDown extends PureComponent {
     const { name } = this.props;
     return (
       <>
-        <Dropdown overlay={menu}>
+        <Dropdown overlay={menu} >
           <Button>
             {name}<Icon type="down" />
           </Button>
