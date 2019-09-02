@@ -2,6 +2,12 @@
 import React, { PureComponent } from 'react';
 import { Menu, Dropdown, Button, Icon, message } from 'antd';
 
+function handleMenuClick(e) {
+  message.info('Click on menu item.');
+  console.log('click', e);
+}
+
+
 const menu = (
   <Menu onClick={handleMenuClick}>
     <Menu.Item key="1">
@@ -18,11 +24,12 @@ const menu = (
 
 class ScreenDropDown extends PureComponent {
   render() {
+    const { name } = this.props;
     return (
       <>
         <Dropdown overlay={menu}>
           <Button>
-            All Content Categories <Icon type="down" />
+            {name}<Icon type="down" />
           </Button>
         </Dropdown>
       </>
