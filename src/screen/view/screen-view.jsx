@@ -24,13 +24,14 @@ class ScreenView extends PureComponent {
             <ScreenDropDown name="All Content Categories" />
             <ScreenDropDown name="All Industries" isMarginLeft />
             <ScreenDropDown name="status" isMarginLeft />
-            <span style={{ paddingLeft: '15px' }}>clear all</span>
+            <span style={{ paddingLeft: '15px', cursor: 'pointer' }}>clear all</span>
           </Col>
           <Col span={8}>
             <Row justify="end" type="flex">
               <span style={{
                 alignSelf: 'center',
-                marginRight: '16px'
+                marginRight: '16px',
+                fontWeight: 'bold'
               }}>Displaying 1-8 of 123 jobs </span>
               <ScreenDropDown name="Least time left first" />
             </Row>

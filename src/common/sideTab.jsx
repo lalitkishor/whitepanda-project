@@ -5,10 +5,10 @@ import { Row, Col } from 'antd';
 class SideTab extends PureComponent {
   render() {
     return (
-      <Row gutter={24} justify="center" type="flex" style={{
+      <Row justify="center" type="flex" style={{
         boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.09)',
         height: '100vh',
-        position: 'absolute',
+        position: 'fixed',
         width: '64px',
       }}>
         <div style={{

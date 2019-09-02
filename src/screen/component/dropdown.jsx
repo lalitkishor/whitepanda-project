@@ -28,7 +28,7 @@ class ScreenDropDown extends PureComponent {
     return (
       <>
         <Dropdown overlay={menu} >
-          <Button style={{ marginLeft: `${isMarginLeft ? '15px' : '0px'}` }}>
+          <Button style={{ marginLeft: `${isMarginLeft ? '15px' : '0px'}`, fontWeight: 'bold' }}>
             {name}<Icon type="down" />
           </Button>
         </Dropdown>

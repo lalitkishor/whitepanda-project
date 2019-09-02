@@ -5,10 +5,26 @@ import star from '../../assets/img/shape.png';
 
 // color Config
 const colorConfig = {
-  'completed': '#3EBCB3',
-  'Editorial Review': '#f5a853',
-  'Dedalined Missed': '#f25c69',
-  'Revision Requested': '#44b5dd'
+  'completed': {
+    color: '#3EBCB3',
+    status: '4.5',
+    icon: true
+  },
+  'Editorial Review': {
+    color: '#f5a853',
+    status: 'waiting',
+    icon: false
+  },
+  'Dedalined Missed': {
+    color: '#f25c69',
+    status: 'NA',
+    icon: true
+  },
+  'Revision Requested': {
+    color: '#44b5dd',
+    status: '2h 13m left',
+    icon: false
+  }
 }
 
 class Eview extends PureComponent {
@@ -25,7 +41,7 @@ class Eview extends PureComponent {
 
           <Col span={10}>
             <div style={{
-              borderLeft: `4px solid ${colorConfig[status]}`,
+              borderLeft: `4px solid ${colorConfig[status]['color']}`,
               paddingLeft: '36px'
             }}>
               <p style={{
@@ -33,7 +49,8 @@ class Eview extends PureComponent {
                 color: '#000000',
                 fontFamily: 'Roboto',
                 marginBottom: '0px',
-                paddingTop: '20px'
+                paddingTop: '20px',
+                fontWeight: 'bold'
               }}>How to build an e-commerce platform : A step by st..</p>
               <div style={{ paddingBottom: '20px' }}>
                 <span style={{
@@ -61,15 +78,15 @@ class Eview extends PureComponent {
           {/* <Row justify="end" > */}
           <Col span={14}>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-              <p>₹400</p>
+              <p style={{ fontWeight: 'bolder', color: '#1d2330', fontSize: '18px' }}>₹400</p>
               <Button style={{
-                border: `1px solid ${colorConfig[status]}`,
-                color: `${colorConfig[status]}`,
+                border: `1px solid ${colorConfig[status]['color']}`,
+                color: `${colorConfig[status]['color']}`,
                 borderRadius: '14px',
-                backgroundColor: `${colorConfig[status]}`,
+                backgroundColor: `${colorConfig[status]['color']}`,
                 color: 'white'
               }}>{status}</Button>
-              <div><img src={star} /> 4.5</div>
+              <div style={{ fontSize: '14px', fontWeight: 'bold' }}>{colorConfig[status]['icon'] && <img src={star} />}  {colorConfig[status]['status']}</div>
               <Button style={{
                 border: '1px solid #3EBCB3',
                 color: '#3EBCB3',
