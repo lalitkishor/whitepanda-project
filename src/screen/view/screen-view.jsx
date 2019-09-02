@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import ScreenDropDown from '../component/dropdown';
 import { Row, Col } from 'antd';
 import Eview from '../component/e-view';
-import { Button } from 'antd';
+import ScreenPagination from '../component/pagination';
 
 class ScreenView extends PureComponent {
   render() {
@@ -14,7 +14,8 @@ class ScreenView extends PureComponent {
             <h1 style={{
               color: '#1d2330',
               fontSize: '36px',
-              fontFamily: 'Roboto'
+              fontFamily: 'Roboto',
+              marginTop: '40px'
             }}>Your Jobs</h1>
           </Col>
         </Row>
@@ -39,6 +40,18 @@ class ScreenView extends PureComponent {
           <Eview status={"Revision Requested"} />
           <Eview status={"completed"} />
           <Eview status={"Editorial Review"} />
+          <Eview status={"Revision Requested"} />
+          <Eview status={"completed"} />
+          <Eview status={"completed"} />
+          <Eview status={"completed"} />
+          <Eview status={"completed"} />
+        </Row>
+        <Row gutter={24} justify="center" type="flex">
+          <Col span={18}>
+            <Row gutter={24} justify="center" type="flex" style={{ margin: '80px 0px' }}>
+              <ScreenPagination />
+            </Row>
+          </Col>
         </Row>
       </>
     )

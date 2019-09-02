@@ -23,7 +23,7 @@ class Eview extends PureComponent {
           marginTop: '15px'
         }} type="flex" align="middle">
 
-          <Col span={12}>
+          <Col span={10}>
             <div style={{
               borderLeft: `4px solid ${colorConfig[status]}`,
               paddingLeft: '36px'
@@ -59,7 +59,7 @@ class Eview extends PureComponent {
 
           </Col>
           {/* <Row justify="end" > */}
-          <Col span={12}>
+          <Col span={14}>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
               <p>₹400</p>
               <Button style={{
