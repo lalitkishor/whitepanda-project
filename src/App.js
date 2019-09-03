@@ -3,7 +3,6 @@ import ScreenView from './screen/view/screen-view';
 import 'antd/dist/antd.css';
 import ScreenHeader from './common/header';
 import SideTab from './common/sideTab';
-import { Row, Col } from 'antd';
 
 function App() {
   return (

@@ -4,12 +4,11 @@ import { Pagination } from 'antd';
 
 function itemRender(current, type, originalElement) {
     if (type === 'prev') {
-        return <a style={{ color: '#1d2330', fontSize: '14px' }}>Left</a>;
+        return <a style={{ color: '#1d2330', fontSize: '14px' }} >Left</a>;
     }
     if (type === 'next') {
-        return <a style={{ color: '#1d2330', fontSize: '14px' }}>Right</a>;
+        return <a style={{ color: '#1d2330', fontSize: '14px' }} >Right</a>;
     }
-    console.log(originalElement)
     return originalElement;
 }
 

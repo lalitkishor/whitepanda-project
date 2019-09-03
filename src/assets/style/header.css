@@ -1,0 +1,42 @@
+
+
+.headerContainer{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+    height: 64px;
+}
+.yourLogo{
+    color: #000000;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: bold
+}
+.notification {
+    width: 24px;
+    height: 24px;
+    background-color: #f25c69;
+    color: white;
+    font-size: 12px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -14px;
+    margin-top: -12px;
+}
+.userName {
+    background: #b3e77f;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+@media only screen and (max-width: 600px) {
+    .yourLogo{
+    padding-left: 15px;
+  }
+}

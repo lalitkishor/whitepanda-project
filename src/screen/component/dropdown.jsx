@@ -1,7 +1,6 @@
 
 import React, { PureComponent } from 'react';
 import { Menu, Dropdown, Button, Icon, message } from 'antd';
-import { Row, Col } from 'antd';
 import '../../assets/style/dropdown.css';
 
 

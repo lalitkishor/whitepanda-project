@@ -1,0 +1,15 @@
+
+.sidTabContainer {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+    height: 100vh;
+    position: fixed;
+    width: 64px;
+    left: 0;
+}
+.sidTabBoxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: 30px; */
+    margin-top: '24px';
+    position: absolute
+}
