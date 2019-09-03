@@ -1,10 +1,12 @@
 
 import React, { PureComponent } from 'react';
 import { Menu, Dropdown, Button, Icon, message } from 'antd';
+import { Row, Col } from 'antd';
+import '../../assets/style/dropdown.css';
+
 
 function handleMenuClick(e) {
-  message.info('Click on menu item.');
-  console.log('click', e);
+  message.info('Click on Categorie item.');
 }
 
 
@@ -26,13 +28,14 @@ class ScreenDropDown extends PureComponent {
   render() {
     const { name, isMarginLeft } = this.props;
     return (
-      <>
-        <Dropdown overlay={menu} >
-          <Button style={{ marginLeft: `${isMarginLeft ? '15px' : '0px'}`, fontWeight: 'bold' }}>
-            {name}<Icon type="down" />
-          </Button>
-        </Dropdown>
-      </>
+      <Dropdown overlay={menu} >
+        <Button className={'container'} style={{
+          marginLeft: `${isMarginLeft ? '15px' : '0px'}`,
+          fontWeight: 'bold'
+        }}>
+          {name}<Icon type="down" />
+        </Button>
+      </Dropdown >
     )
   }
 }

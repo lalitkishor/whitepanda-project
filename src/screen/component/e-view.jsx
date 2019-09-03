@@ -32,14 +32,14 @@ class Eview extends PureComponent {
   render() {
     const { status } = this.props;
     return (
-      <Col span={18}>
+      <Col span={18} xs={24} md={18} lg={18}>
         <Row style={{
           border: 'solid 1px rgba(29, 35, 48, 0.08)',
           backgroundColor: '#ffffff',
           marginTop: '15px'
         }} type="flex" align="middle">
 
-          <Col span={10}>
+          <Col span={10} xs={24} md={10} lg={10}>
             <div style={{
               borderLeft: `4px solid ${colorConfig[status]['color']}`,
               paddingLeft: '36px'
@@ -76,7 +76,7 @@ class Eview extends PureComponent {
 
           </Col>
           {/* <Row justify="end" > */}
-          <Col span={14}>
+          <Col span={14} xs={24} md={14} lg={14}>
             <div style={{ display: 'flex', justifyContent: 'space-around' }}>
               <p style={{ fontWeight: 'bolder', color: '#1d2330', fontSize: '18px' }}>₹400</p>
               <Button style={{

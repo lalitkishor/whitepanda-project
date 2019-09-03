@@ -6,11 +6,11 @@ import notification from '../assets/img/notification.png';
 class ScreenHeader extends PureComponent {
   render() {
     return (
-      <Row gutter={24} justify="center" align="middle" type="flex" style={{
+      <Row gutter={24} xs={24} md={24} lg={24} justify="center" align="middle" type="flex" style={{
         boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.09)',
         height: '64px'
       }}>
-        <Col span={12}>
+        <Col xs={0} md={12} lg={12}>
           <h3 style={{
             color: '#000000',
             fontSize: '16px',
@@ -18,7 +18,17 @@ class ScreenHeader extends PureComponent {
             fontWeight: 'bold'
           }}>Your Logo</h3>
         </Col>
-        <Col span={6}>
+
+        <Col xs={12} md={0} lg={0}>
+          <h3 style={{
+            color: '#000000',
+            fontSize: '16px',
+            fontFamily: 'Roboto',
+            fontWeight: 'bold',
+            paddingLeft: '15px'
+          }}>YL</h3>
+        </Col>
+        <Col xs={12} md={6} lg={6}>
           <Row justify="end" type="flex">
             <Col span={24}>
               <Row justify="end" type="flex">
@@ -54,7 +64,8 @@ class ScreenHeader extends PureComponent {
                     height: '40px',
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    marginRight: '16px'
                   }}
                 >
                   AB
